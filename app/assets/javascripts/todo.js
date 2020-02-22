@@ -1,6 +1,6 @@
 $(function () {
   function buildHTML(todo) {
-    var html = $('<li class="todo">').append(todo.content);
+    var html = $('<li class="todo">').append(todo_content);
     return html;
   }
   $('.js-form').on('submit', function (e) {
