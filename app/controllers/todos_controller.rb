@@ -5,7 +5,10 @@ class TodosController < ApplicationController
   end
   def create
     Todo.create(todo_params)
-    redirect_to :root
+    respond_to do |format|
+      format.html { redirect_to :root }
+      format.json { render json: @todo}
+    end
   end
   private
   def todo_params
